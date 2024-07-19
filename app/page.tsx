@@ -11,6 +11,7 @@ import { LampDemo } from "@/components/LampEffects";
 import Services from "@/components/Services";
 import TechStack from "@/components/TechStack";
 import Loader from "@/components/Loader";
+
 export default function Home() {
   return (
     <main className="relative bg-black-100 justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
