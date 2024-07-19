@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ridwanyinus.is-a.dev
+
+# Sitemaps
+Sitemap: https://ridwanyinus.is-a.dev/sitemap.xml
