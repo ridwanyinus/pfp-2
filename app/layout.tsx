@@ -4,7 +4,7 @@ import { ThemeProvider } from "./provider";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Ridwan Yinus - Front-End Developer & Designer | React, Next.js",
+  title: "Ridwan Yinus - Front End Developer & Designer | React, Next.js",
   description: "Explore Ridwan's portfolio of front-end projects and graphic designs. Specializing in React, Next.js, and Tailwind CSS for high-quality, user-friendly websites.",
 };
 
