@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Ridwan Yinus - Front-End Developer & Designer | React, Next.js",
-  description: " Explore Ridwan's portfolio of front-end projects and graphic designs. Specializing in React, Next.js, and Tailwind CSS for high-quality, user-friendly websites.",
+  description: "Explore Ridwan's portfolio of front-end projects and graphic designs. Specializing in React, Next.js, and Tailwind CSS for high-quality, user-friendly websites.",
 };
 
 export default function RootLayout({
@@ -14,8 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="google-site-verification" content="IwEzWIUdKrFD6IMbBVaEowWRRvww402-YO9W9uLAZgc" />
+      </Head>
       <body className="font-poppins">
-        {" "}
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
