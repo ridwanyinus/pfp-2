@@ -30,7 +30,7 @@ export default function RootLayout({
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ridwanyinus.is-a.dev" />
-        <meta property="og:image" content="/public/hero.png" />
+        <meta property="og:image" content="https://ridwanyinus.is-a.dev/hero.png" />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -39,7 +39,7 @@ export default function RootLayout({
           name="twitter:description"
           content="Explore the portfolio of Ridwan Yinus, a React front end developer and Graphic Designer specializing in creating high-quality, user-friendly websites using React, Next.js, and Tailwind CSS."
         />
-        <meta name="twitter:image" content="/public/hero.png" />
+        <meta name="twitter:image" content="https://ridwanyinus.is-a.dev/hero.png" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </Head>
       <body className="font-poppins">
