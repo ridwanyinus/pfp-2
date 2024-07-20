@@ -23,7 +23,7 @@ export default function RootLayout({
         <meta name="description" content={String(metadata.description)} />
         <meta name="google-site-verification" content="IwEzWIUdKrFD6IMbBVaEowWRRvww402-YO9W9uLAZgc" />
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Ridwan Yinus - Front End Developer" />
+        <meta property="og:title" content="Ridwan Yinus - Front End Developer & Graphic Designer" />
         <meta
           property="og:description"
           content="Explore the portfolio of Ridwan Yinus, a React front end developer and Graphic Designer specializing in creating high-quality, user-friendly websites using React, Next.js, and Tailwind CSS."
@@ -34,7 +34,7 @@ export default function RootLayout({
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ridwan Yinus - Front End Developer" />
+        <meta name="twitter:title" content="Ridwan Yinus - Front End Developer & Graphic Designer" />
         <meta
           name="twitter:description"
           content="Explore the portfolio of Ridwan Yinus, a React front end developer and Graphic Designer specializing in creating high-quality, user-friendly websites using React, Next.js, and Tailwind CSS."
