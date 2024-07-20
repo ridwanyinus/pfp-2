@@ -49,11 +49,11 @@ const About = () => {
       <section className="flex flex-col justify-between lg:items-center xl:items-start md:flex-row mt-6 xl:mt-28 max-lg:gap-y-10">
         <div className="md:w-[50%]  lg:w-[1/2]    xl:w-[48%] largesceen:w-[50%]">
           <h3 className="max-xs:text-sm text-base sm:text-xl md:text-lg lg:text-2xl fourk:text-4xl font-prompt mx-auto z-10">
-            I’m Ridwan, a passionate Nigerian front-end developer and graphic designer. I use React, Next.js, and Tailwind CSS to create user-friendly, responsive web applications. For graphics, I use
-            Illustrator and Photoshop. <br /> Beyond coding, I enjoy playing chess, watching football, immersing myself in movies and series, listening to music, and diving into captivating books.
-            These interests enhance my creativity and technical skills. <br /> As a developer and designer, I create beautiful, functional interfaces. I excel in group settings, coordinating closely
-            with project managers, back-end developers, and designers to produce high-quality digital solutions. My attention to detail and problem-solving skills enable me to troubleshoot issues and
-            implement effective solutions.
+            I’m Ridwan, a passionate Nigerian React front-end developer and graphic designer. I use React, Next.js, and Tailwind CSS to create user-friendly, responsive web applications. For graphics,
+            I use Illustrator and Photoshop. <br /> Beyond coding, I enjoy playing chess, watching football, immersing myself in movies and series, listening to music, and diving into captivating
+            books. These interests enhance my creativity and technical skills. <br /> As a developer and designer, I create beautiful, functional interfaces. I excel in group settings, coordinating
+            closely with project managers, back-end developers, and designers to produce high-quality digital solutions. My attention to detail and problem-solving skills enable me to troubleshoot
+            issues and implement effective solutions.
           </h3>
         </div>
 

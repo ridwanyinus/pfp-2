@@ -37,7 +37,13 @@ const RecentProjects = () => {
                 <div className="relative w-full h-full overflow-x-clip lg:overflow-none xs:rounded-3xl" style={{ backgroundColor: "#13162D" }}>
                   <Image src={bg} alt="bgimg" className="overflow-clip" />
                 </div>
-                <Image width={500} height={500} src={img} alt="cover" className="z-10 absolute bottom-0 lg:-bottom-5 xl:bottom-0 xs:rounded-2xl h-full w-full object-cover" />
+                <Image
+                  width={500}
+                  height={500}
+                  src={img}
+                  alt="recent project front end, front end developer, react front end developer"
+                  className="z-10 absolute bottom-0 lg:-bottom-5 xl:bottom-0 xs:rounded-2xl h-full w-full object-cover"
+                />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 font-poppins">{title}</h1>
 

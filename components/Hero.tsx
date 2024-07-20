@@ -45,7 +45,12 @@ const Hero = () => {
             <a
               href="https://mail.google.com/mail/u/0/?to=ridwanyinusa15@gmail.com&fs=1&tf=cm"
               className="w-10 h-10 desktop:h-14 desktop:w-14 largesceen:h-16 largesceen:w-16  flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 border-black-300 rounded-lg  hover:bg-white  group">
-              <Image src={gmail} width={27} alt="gmail" className="desktop:w-[35px] desktop:h-[35px] largesceen:w-[40px] largesceen:h-[40px] group-hover:opacity-100 opacity-0" />
+              <Image
+                src={gmail}
+                width={27}
+                alt="gmail  front end, front end developer, react front end developer"
+                className="desktop:w-[35px] desktop:h-[35px] largesceen:w-[40px] largesceen:h-[40px] group-hover:opacity-100 opacity-0"
+              />
               <GoMail size={23} className="group-hover:opacity-0 opacity-100 absolute desktop:w-[35px] desktop:h-[35px] largesceen:w-[40px] largesceen:h-[40px]" />
             </a>
 
@@ -70,7 +75,7 @@ const Hero = () => {
         </div>
 
         <div className="mt-20 medium:mt-0 flex-1 justify-center  medium:justify-end xl:justify-center  items-center flex">
-          <Image alt="developer" src={dev} className="medium:w-[280px] lg:w-[369px] desktop:w-[500px] largesceen:w-[600px]" priority />
+          <Image alt="Ridwan Yinus - React Front End Developer " src={dev} className="medium:w-[280px] lg:w-[369px] desktop:w-[500px] largesceen:w-[600px]" priority />
         </div>
       </section>
     </section>
