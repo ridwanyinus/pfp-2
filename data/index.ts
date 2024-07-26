@@ -43,6 +43,15 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 3,
+    title: "KNFT: Culinary Delights Await",
+    des: "Discover, buy, and sell unique KNFTs on our platform.",
+    img: "/knft.png",
+    iconLists: ["/re.svg", "/tail.svg", "/next.svg", "/ts.svg"],
+    link: "https://knft-ryo.vercel.app/",
+  },
+
+  {
     id: 4,
     title: "BankHotel: A Place of Tranquility and Community",
     des: "Discover bankHotel, a serene hotel dedicated to nurturing community spirit and fostering connections.",
@@ -65,14 +74,6 @@ export const projects = [
     img: "/sos.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg"],
     link: "https://sos-game-ryo.vercel.app",
-  },
-  {
-    id: 3,
-    title: "Gourmet Haven: Culinary Delights Await",
-    des: "Welcome to Gourmet Haven, your gateway to an extraordinary dining experience. Our restaurant website offers a seamless way to explore our diverse menu, featuring delectable dishes crafted from",
-    img: "/restaurant2.png",
-    iconLists: ["/re.svg", "/tail.svg", "/next.svg", "/ts.svg"],
-    link: "https://restaurant-app-ryo.vercel.app",
   },
 ];
 
