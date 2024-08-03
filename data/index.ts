@@ -43,6 +43,14 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 2,
+    title: "Brainwave: Your Ultimate Guide to Companion",
+    des: "With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.",
+    img: "/brainwave.png",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg"],
+    link: "https://brainwave-ryo.vercel.app/",
+  },
+  {
     id: 3,
     title: "KNFT: Culinary Delights Await",
     des: "Discover, buy, and sell unique KNFTs on our platform.",
@@ -66,14 +74,6 @@ export const projects = [
     img: "/fraz2.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
     link: "https://fraz-prap.vercel.app",
-  },
-  {
-    id: 2,
-    title: "SOS Gaming: Your Ultimate Gaming Companion",
-    des: "Step into the world of gaming excellence with SOS Gaming, your ultimate companion for all things gaming. Our app offers a comprehensive hub for gamers, featuring the latest game reviews,",
-    img: "/sos.png",
-    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg"],
-    link: "https://sos-game-ryo.vercel.app",
   },
 ];
 
