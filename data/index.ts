@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Services", link: "#service" },
@@ -33,7 +31,7 @@ export const gridItems = [
     id: 6,
     title: "Do you want to start a project together?",
     description: "",
-    className: " sm:col-span-1",
+    className: "sm:col-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
