@@ -41,6 +41,14 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 1,
+    title: "Positivus: Navigating the digital landscape for success",
+    des: "Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.",
+    img: "/positivus.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+    link: "https://positivus-ryo.vercel.app/",
+  },
+  {
     id: 2,
     title: "Brainwave: Your Ultimate Guide to Companion",
     des: "With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes.",
@@ -64,14 +72,6 @@ export const projects = [
     img: "/bank.jpg",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg"],
     link: "https://bank-hotel-ryo.vercel.app",
-  },
-  {
-    id: 1,
-    title: "Frap Prop: Your Trusted Partner in Homeownership",
-    des: "At Frap Prop, we are committed to crafting your homeownership dreams into vibrant, lasting realities through unwavering dedication and expertise.",
-    img: "/fraz2.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
-    link: "https://fraz-prap.vercel.app",
   },
 ];
 
