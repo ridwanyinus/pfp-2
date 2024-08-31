@@ -11,7 +11,7 @@ import canva from '@/public/canva.png';
 import figma from '@/public/figma.svg';
 import npm from '@/public/npm.svg';
 import vs from '@/public/visual-studio-code.svg';
-import varcel from '@/public/vercel-icon.svg';
+import vercel from '@/public/vercel-icon.svg';
 import netlify from '@/public/netlify.svg';
 import gitlab from '@/public/gitlab.svg';
 import ps from '@/public/photoshop.png';
@@ -150,10 +150,19 @@ export const techStack1 = [
 ];
 
 export const techStack2 = [
-  { name: 'react', img: html },
-  { name: 'typescript', img: css },
-  { name: 'next.js', img: js },
-  { name: 'tailwind', img: github },
-  { name: 'vscode', img: git },
-  { name: 'npm', img: gitlab },
+  { name: 'react', img: react },
+  { name: 'typescript', img: typescript },
+  { name: 'next.js', img: nextjs },
+  { name: 'tailwind', img: tailwind },
+  { name: 'vscode', img: vs },
+  { name: 'npm', img: npm },
+];
+
+export const techStack3 = [
+  { name: 'photoshop', img: ps },
+  { name: 'ILLUSTRATOR', img: ai },
+  { name: 'figma', img: figma },
+  { name: 'canva', img: canva },
+  { name: 'vercel', img: vercel },
+  { name: 'netlify', img: netlify },
 ];

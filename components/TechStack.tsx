@@ -21,7 +21,7 @@ import netlify from '@/public/netlify.svg';
 import gitlab from '@/public/gitlab.svg';
 import ps from '@/public/photoshop.png';
 import nextjs from '@/public/next.svg';
-import { techStack1, techStack2 } from '@/data';
+import { techStack1, techStack2, techStack3 } from '@/data';
 
 const TechStack = () => {
   useEffect(() => {
@@ -82,47 +82,16 @@ const TechStack = () => {
         data-aos-offset='150'
         data-aos-easing='ease-in-sine'
         data-aos-duration='400'>
-        <div className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-48 largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
-          <div className='bg-white rounded-full  w-20   h-20 flex items-center justify-center'>
-            <Image src={ps} alt='photoshop-icons' className='w-10' />
+        {techStack3.map((items, idx: number) => (
+          <div
+            key={idx}
+            className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-40 laptop:w-48  largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
+            <div className='bg-white rounded-full  w-20   h-20 flex items-center justify-center'>
+              <Image src={items.img} alt={items.name} className='w-10' />
+            </div>
+            <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold uppercase'>{items.name}</p>
           </div>
-          <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold'>PHOTOSHOP</p>
-        </div>
-
-        <div className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-48 largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
-          <div className='bg-white rounded-full  w-20  h-20 flex items-center justify-center'>
-            <Image src={ai} alt='illustrator' className='w-10' />
-          </div>
-          <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold'>ILLUSTRATOR</p>
-        </div>
-
-        <div className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-48 largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
-          <div className='bg-black rounded-full  w-20  h-20 flex items-center justify-center'>
-            <Image src={figma} alt='figma' className='w-10' />
-          </div>
-          <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold'>FIGMA</p>
-        </div>
-
-        <div className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-48 largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
-          <div className='bg-white rounded-full  w-20  h-20 flex items-center justify-center'>
-            <Image src={canva} alt='canva' className='w-10' />
-          </div>
-          <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold'>CANVA</p>
-        </div>
-
-        <div className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-48 largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
-          <div className='bg-white rounded-full  w-20  h-20 flex items-center justify-center'>
-            <Image src={varcel} alt='vercel' className='w-10' />
-          </div>
-          <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold'>VERCEL</p>
-        </div>
-
-        <div className='animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[135px] xl:w-48 largesceen:w-[13.75rem] fourk:w-[255px]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8'>
-          <div className='bg-white rounded-full  w-20  h-20 flex items-center justify-center'>
-            <Image src={netlify} alt='netlify' className='w-10' />
-          </div>
-          <p className='text-white max-xs:text-sm text-base small:text-lg mt-6 font-poppins font-bold'>NETLIFY</p>
-        </div>
+        ))}
       </section>
     </main>
   );
