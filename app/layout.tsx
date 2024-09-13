@@ -3,12 +3,71 @@ import './globals.css';
 import { ThemeProvider } from './provider';
 import Head from 'next/head';
 import schemaData from '@/components/schema';
+import { seoData } from '@/lib/content/portfolio';
 export const metadata: Metadata = {
-  title: 'Ridwan Yinus - Front End Developer & Designer | React, Next.js',
-  description: "Explore Ridwan's portfolio of front-end projects. Specializing in React, Next.js, and Tailwind CSS for high-quality, user-friendly websites.",
+  title: seoData.title,
+
+  authors: [
+    {
+      name: seoData.author,
+    },
+  ],
+  description: seoData.description,
+  keywords: seoData.keywords.join(','),
+  metadataBase: new URL(seoData.url),
+  alternates: {
+    canonical: seoData.url,
+  },
+  openGraph: {
+    type: 'website',
+    url: seoData.url,
+    title: seoData.title,
+    description: seoData.description,
+    images: seoData.image,
+    siteName: seoData.title,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seoData.title,
+    description: seoData.description,
+    images: seoData.image,
+    site: seoData.url,
+  },
   verification: {
     google: 'IwEzWIUdKrFD6IMbBVaEowWRRvww402-YO9W9uLAZgc',
   },
+
+  icons: [
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/favicons/apple-touch-icon.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '512x512',
+      url: '/favicons/android-chrome-512x512.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '192x192',
+      url: '/favicons/android-chrome-192x192.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/favicons/favicon-32x32.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/favicons/favicon-16x16.png',
+    },
+  ],
 };
 
 export default function RootLayout({

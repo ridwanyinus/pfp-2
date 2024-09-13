@@ -16,7 +16,7 @@ import Loader from '@/components/Loader';
 // TODO: create a index.ts for all the datas for better restructuring
 // TODO: create a dynamic seo data
 // TODO: create a 404
-//  TODO delete unused variables and remove unused imports
+// TODO: delete unused variables and remove unused imports
 // TODO: make the code cleaner and more readable
 // TODO: use localfonts for optimization
 // TODO: add animations.ts
@@ -25,7 +25,7 @@ import Loader from '@/components/Loader';
 
 export default function Home() {
   return (
-    <main className='relative bg-black-100 justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5'>
+    <main className='main'>
       <div className='w-full'>
         <Loader />
         <FloatingNav navItems={navItems} />
