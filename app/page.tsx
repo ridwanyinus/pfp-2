@@ -1,11 +1,10 @@
 import Approach from '@/components/Approach';
-import Experience from '@/components/Experience';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import RecentProjects from '@/components/RecentProjects';
 import Ridwan from '@/components/Logo';
 import { FloatingNav } from '@/components/ui/FloatingNav';
-import { navItems } from '@/data';
+import { navItems } from '@/lib/content/navbar';
 import About from '@/components/About';
 import { LampDemo } from '@/components/LampEffects';
 import Services from '@/components/Services';
@@ -22,7 +21,8 @@ import Loader from '@/components/Loader';
 // TODO: add animations.ts
 // TODO: create more utils-css for repeatable styles
 // TODO:  add a favicon for all the pages and sizes
-
+// todo: remove all text-px to rem
+// todo: replace all anchor tag with next/link
 export default function Home() {
   return (
     <main className='main'>
@@ -38,7 +38,6 @@ export default function Home() {
         <TechStack />
         <RecentProjects />
         <Approach />
-        {/* <Experience /> */}
         <Footer />
       </div>
     </main>

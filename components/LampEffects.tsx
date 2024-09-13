@@ -1,7 +1,6 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { LampContainer } from "@/components/ui/Lamp";
+'use client';
+import { motion } from 'framer-motion';
+import { LampContainer } from '@/components/ui/Lamp';
 
 export function LampDemo() {
   return (
@@ -12,10 +11,9 @@ export function LampDemo() {
         transition={{
           delay: 0.3,
           duration: 0.8,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500  bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-      </motion.h1>
+        className='mt-8 bg-gradient-to-br from-slate-300 to-slate-500  bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl'></motion.h1>
     </LampContainer>
   );
 }

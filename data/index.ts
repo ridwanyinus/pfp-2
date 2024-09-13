@@ -1,61 +1,9 @@
-import html from '@/public/html-5.svg';
-import css from '@/public/css-3.svg';
-import js from '@/public/javascript.svg';
-import react from '@/public/react.svg';
-import typescript from '@/public/typescript.png';
-import tailwind from '@/public/tailwind.png';
-import ai from '@/public/illustrator.png';
-import github from '@/public/github-icon.svg';
-import git from '@/public/git-icon.svg';
-import canva from '@/public/canva.png';
-import figma from '@/public/figma.svg';
-import npm from '@/public/npm.svg';
-import vs from '@/public/visual-studio-code.svg';
-import vercel from '@/public/vercel-icon.svg';
-import netlify from '@/public/netlify.svg';
-import gitlab from '@/public/gitlab.svg';
-import ps from '@/public/photoshop.png';
-import nextjs from '@/public/next.svg';
-
+import assets from '@/lib/assets/assets';
 export const navItems = [
-  { name: 'About', link: '#about' },
-  { name: 'Services', link: '#service' },
-  { name: 'Projects', link: '#projects' },
-  { name: 'Contact', link: '#footer' },
-];
-
-export const gridItems = [
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: '',
-    className: 'sm:col-span-1',
-    imgClassName: '',
-    titleClassName: 'justify-start',
-    img: '',
-    spareImg: '',
-  },
-
-  // {
-  //   id: 5,
-  //   title: "Currently building a JS Animation library",
-  //   description: "The Inside Scoop",
-  //   className: "md:col-span-3 md:row-span-2",
-  //   imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-  //   titleClassName: "justify-center md:justify-start lg:justify-center",
-  //   img: "/b5.svg",
-  //   spareImg: "/grid.svg",
-  // },
-  {
-    id: 6,
-    title: 'Do you want to start a project together?',
-    description: '',
-    className: 'sm:col-span-1',
-    imgClassName: '',
-    titleClassName: 'justify-center md:max-w-full max-w-60 text-center',
-    img: '',
-    spareImg: '',
-  },
+  { name: 'About', url: '#about' },
+  { name: 'Services', url: '#service' },
+  { name: 'Projects', url: '#projects' },
+  { name: 'Contact', url: '#footer' },
 ];
 
 export const projects = [
@@ -109,60 +57,29 @@ export const socialMedia = [
   },
 ];
 
-export const workExperience = [
-  {
-    id: 1,
-    title: 'Frontend Engineer Intern',
-    desc: 'Assisted in the development of a web-based platform using React.js, enhancing interactivity.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp1.svg',
-  },
-  {
-    id: 2,
-    title: 'Mobile App Dev - JSM Tech',
-    desc: 'Designed and developed mobile app for both iOS & Android platforms using React Native.',
-    className: 'md:col-span-2', // change to md:col-span-2
-    thumbnail: '/exp2.svg',
-  },
-  {
-    id: 3,
-    title: 'Freelance App Dev Project',
-    desc: 'Led the dev of a mobile app for a client, from initial concept to deployment on app stores.',
-    className: 'md:col-span-2', // change to md:col-span-2
-    thumbnail: '/exp3.svg',
-  },
-  {
-    id: 4,
-    title: 'Lead Frontend Developer',
-    desc: 'Developed and maintained user-facing features using modern frontend technologies.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp4.svg',
-  },
-];
-
 export const techStack1 = [
-  { name: 'html', img: html },
-  { name: 'css', img: css },
-  { name: 'JAVASCRIPT', img: js },
-  { name: 'github', img: github },
-  { name: 'git', img: git },
-  { name: 'gitlab', img: gitlab },
+  { name: 'html', img: assets.html },
+  { name: 'css', img: assets.css },
+  { name: 'JAVASCRIPT', img: assets.js },
+  { name: 'github', img: assets.github },
+  { name: 'git', img: assets.git },
+  { name: 'gitlab', img: assets.gitlab },
 ];
 
 export const techStack2 = [
-  { name: 'react', img: react },
-  { name: 'typescript', img: typescript },
-  { name: 'next.js', img: nextjs },
-  { name: 'tailwind', img: tailwind },
-  { name: 'vscode', img: vs },
-  { name: 'npm', img: npm },
+  { name: 'react', img: assets.react },
+  { name: 'typescript', img: assets.typescript },
+  { name: 'next.js', img: assets.nextjs },
+  { name: 'tailwind', img: assets.tailwind },
+  { name: 'vscode', img: assets.vs },
+  { name: 'npm', img: assets.npm },
 ];
 
 export const techStack3 = [
-  { name: 'photoshop', img: ps },
-  { name: 'ILLUSTRATOR', img: ai },
-  { name: 'figma', img: figma },
-  { name: 'canva', img: canva },
-  { name: 'vercel', img: vercel },
-  { name: 'netlify', img: netlify },
+  { name: 'photoshop', img: assets.ps },
+  { name: 'ILLUSTRATOR', img: assets.ai },
+  { name: 'figma', img: assets.figma },
+  { name: 'canva', img: assets.canva },
+  { name: 'vercel', img: assets.vercel },
+  { name: 'netlify', img: assets.netlify },
 ];

@@ -4,6 +4,8 @@ import { ThemeProvider } from './provider';
 import Head from 'next/head';
 import schemaData from '@/components/schema';
 import { seoData } from '@/lib/content/portfolio';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export const metadata: Metadata = {
   title: seoData.title,
 
@@ -81,24 +83,6 @@ export default function RootLayout({
         <title>{String(metadata.title)}</title>
         <meta name='description' content={String(metadata.description)} />
         <meta name='google-site-verification' content='IwEzWIUdKrFD6IMbBVaEowWRRvww402-YO9W9uLAZgc' />
-        {/* Open Graph Meta Tags */}
-        <meta property='og:title' content='Ridwan Yinus - Front End Developer & Graphic Designer' />
-        <meta
-          property='og:description'
-          content='Explore the portfolio of Ridwan Yinus, a React front end developer and Graphic Designer specializing in creating high-quality, user-friendly websites using React, Next.js, and Tailwind CSS.'
-        />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ridwanyinus.is-a.dev' />
-        <meta property='og:image' content='https://ridwanyinus.is-a.dev/hero.png' />
-
-        {/* Twitter Meta Tags */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Ridwan Yinus - Front End Developer & Graphic Designer' />
-        <meta
-          name='twitter:description'
-          content='Explore the portfolio of Ridwan Yinus, a React front end developer and Graphic Designer specializing in creating high-quality, user-friendly websites using React, Next.js, and Tailwind CSS.'
-        />
-        <meta name='twitter:image' content='https://ridwanyinus.is-a.dev/hero.png' />
         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </Head>
       <body className='font-poppins'>

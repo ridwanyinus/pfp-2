@@ -1,13 +1,12 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { GoMail } from 'react-icons/go';
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaDiscord } from 'react-icons/fa';
 import ContactForm from '@/components/ui/ContactForm';
-import grid from '../public/footer-grid.svg';
+import grid from '@/public/footer-grid.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 

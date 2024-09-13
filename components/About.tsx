@@ -6,9 +6,12 @@ import Lottie from 'react-lottie';
 import Image from 'next/image';
 import MagicButton from './ui/MagicButton';
 import { IoCopyOutline } from 'react-icons/io5';
-import chart1 from '@/public/chart1.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import assets from '@/lib/assets/assets';
+
+// TODO: move all the data to lib/content/about
+// todo: make utils class for all reusable classes
 
 const About = () => {
   const [copied, setCopied] = useState(false);
@@ -110,7 +113,7 @@ const About = () => {
         </div>
 
         <div className='lg:w-1/3 w-auto max-lg:order-1'>
-          <Image alt='chart' src={chart1} quality={100} priority placeholder='blur' />
+          <Image alt='chart' src={assets.chart1} quality={100} priority placeholder='blur' />
         </div>
 
         <div className='flex flex-col gap-4 lg:w-1/3 lg:pl-16 xl:pl-28 desktop:pl-36 2xl:pl-48'>

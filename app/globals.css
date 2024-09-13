@@ -66,9 +66,7 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
-}
 
-@layer base {
   * {
     @apply border-border !scroll-smooth;
   }
@@ -88,6 +86,27 @@
 
   .main {
     @apply relative bg-black-100 justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5;
+  }
+
+  .heading-h1 {
+    @apply text-left text-6xl  xs:text-7xl small:text-[5.625rem] sm:text-8xl medium:text-[5rem] lg:text-[6.25rem] xl:text-[7.5rem] largesceen:text-9xl font-inter font-black leading-none w-full z-10 relative;
+  }
+
+  .github:hover {
+    background-color: #181717 !important;
+  }
+
+  /* todo: find out the reason of not working */
+  .telegrams:hover {
+    background-color: #19adce !important;
+  }
+
+  .discord:hover {
+    background-color: #5865f2 !important;
+  }
+
+  .linkedIn:hover {
+    background-color: #0077b5 !important;
   }
 }
 
