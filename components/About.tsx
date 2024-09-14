@@ -7,12 +7,9 @@ import Image from 'next/image';
 import MagicButton from './ui/MagicButton';
 import { IoCopyOutline } from 'react-icons/io5';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import assets from '@/lib/assets/assets';
-
-// TODO: move all the data to lib/content/about
-// todo: make utils class for all reusable classes
-
+import { about, programmer, designer } from '@/lib/content/about';
+import { getId } from '@/utils/helper';
 const About = () => {
   const [copied, setCopied] = useState(false);
 
@@ -45,11 +42,11 @@ const About = () => {
       data-aos-offset='150'
       data-aos-easing='ease-in-sine'
       data-aos-duration='400'>
-      <h2 className='mx-auto block w-full text-5xl 2xl:text-7xl font-prompt font-black bg-gradient-to-r text-center'>
-        <span className='pr-2 relative z-10 bg-gradient-to-r from-gradient-light to-gradient-dark text-transparent bg-clip-text xl:hidden'> ABOUT ME</span>
-        <span className=' pr-2 relative z-10 hidden xl:block'> ABOUT ME</span>
+      <h2 className='heading-h2'>
+        <span className='heading-h2-span-mobile'> ABOUT ME</span>
+        <span className='heading-h2-span'> ABOUT ME</span>
       </h2>
-      <section className='flex flex-col justify-between lg:justify-center lg:items-center 2xl:items-start md:flex-row pt-6 md:pt-12 xl:pt-28 max-lg:gap-y-10'>
+      <section className='flex flex-col justify-between md:justify-center md:items-center pt-6 md:pt-12 xl:pt-28 max-lg:gap-y-10'>
         <div className='md:w-[70%]'>
           <h3 className='max-xs:text-sm font-light  text-base sm:text-lg md:text-[0.8rem] lg:text-lg xl:text-2xl largesceen:text-[1.75rem] fourk:text-4xl font-prompt mx-auto z-10 leading-[199%]'>
             I’m Ridwan, a passionate Nigerian React front-end developer and graphic designer. I use React, Next.js, and Tailwind CSS to create user-friendly, responsive web applications. For graphics,
@@ -62,34 +59,18 @@ const About = () => {
 
         <div className='relative w-full small:w-[95%]  md:hidden'>
           <div className='absolute inset-0' />
-          <div className='relative shadow-xl bg-custom-gradient border border-white/[0.1] md:px-6  lg:px-8  overflow-hidden rounded-3xl flex flex-col justify-end items-start px-2 xs:px-6 py-6 small:py-12 md:py-8 lg:py-12 desktop:py-12 2xl:py-14 largesceen:py-20'>
+          <div className='relative shadow-xl bg-custom-gradient border border-white/[0.1] md:px-6  lg:px-8  overflow-hidden rounded-2xl flex flex-col justify-end items-start px-2 xs:px-6 py-6 small:py-12'>
             <h1 className='font-bold font-outfit text-lg xs:text-[1.4rem] small:text-3xl medium:text-xl lg:text-2xl 2xl:text-3xl text-white mb-8 largesceen:mb-12 relative z-50 '>
-              <span className='pr-1'> Front-End Developer</span> | <br /> Graphics Designer
+              <span className='pr-1'> Front-End Developer</span>
             </h1>
 
-            <p className='font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base md:text-[13px] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-4 relative z-50'>
-              <span className='pr-4 w-[60px]  md:w-[60px] lg:w-[108px] inline-flex'>Birthday</span> : Dec 05
-            </p>
-
-            <p className='font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base md:text-[13px] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-4 relative z-50'>
-              <span className='pr-4 w-[60px] md:w-[60px] lg:w-[108px] inline-flex'>Phone</span> : +(234) 8166319747
-            </p>
-
-            <p className='font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base md:text-[13px] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-4 relative z-50'>
-              <span className='pr-4 w-[60px] md:w-[60px] lg:w-[108px] inline-flex'>Email</span> : ridwanyinusa15@gmail.com
-            </p>
-
-            <p className='font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base md:text-[13px] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-4 relative z-50'>
-              <span className='pr-4 w-[60px] md:w-[60px] lg:w-[108px] inline-flex'>From</span> : Lagos, Nigeria
-            </p>
-
-            <p className='font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base  md:text-[13px] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-4 relative z-50'>
-              <span className='pr-4 w-[60px] md:w-[60px] lg:w-[108px] inline-flex'>Language</span> : English, Yoruba, Hausa
-            </p>
-
-            <p className='font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base md:text-[13px] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-2 lg:mb-4 relative z-50'>
-              <span className='pr-4 w-[60px] md:w-[60px] lg:w-[108px] inline-flex'>Freelance</span> : Available
-            </p>
+            {about.map((items) => (
+              <div key={getId()}>
+                <p className='about'>
+                  <span className='about-span '>{items.name}</span> {items.info}
+                </p>
+              </div>
+            ))}
 
             <div className='relative largesceen:mt-4'>
               <div className={`absolute -bottom-5 right-0 ${copied ? 'block' : 'block'}`}>
@@ -105,11 +86,13 @@ const About = () => {
 
       <div className='mt-24 max-lg:gap-12 flex flex-col justify-center max-lg:text-center lg:flex-row  lg:justify-between  w-full items-center'>
         <div className='flex flex-col gap-4  lg:w-1/3 '>
-          <h2 className='font-outfit text-4xl text-purple mb-4 font-medium'>Part Programmer</h2>
-          <p className='font-poppins text-lg'>Front-end development </p>
-          <p className='font-poppins text-lg'> HTML | CSS</p>
-          <p className='font-poppins text-lg'>JavaScript</p>
-          <p className='font-poppins text-lg'>React.js | Next.js </p>
+          <h2 className='about-job'>Part Programmer</h2>
+
+          {programmer.map((item) => (
+            <div key={getId()}>
+              <p className='about-offer'>{item.name}</p>
+            </div>
+          ))}
         </div>
 
         <div className='lg:w-1/3 w-auto max-lg:order-1'>
@@ -117,11 +100,13 @@ const About = () => {
         </div>
 
         <div className='flex flex-col gap-4 lg:w-1/3 lg:pl-16 xl:pl-28 desktop:pl-36 2xl:pl-48'>
-          <h2 className='font-outfit text-4xl text-purple mb-4 font-medium'>Part Designer</h2>
-          <p className='font-poppins text-lg'>Logo Design</p>
-          <p className='font-poppins text-lg'>Branding </p>
-          <p className='font-poppins text-lg'>Flyer Design </p>
-          <p className='font-poppins text-lg'>Interaction Design</p>
+          <h2 className='about-job'>Part Designer</h2>
+
+          {designer.map((item) => (
+            <div key={getId()}>
+              <p className='about-offer'>{item.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </main>
