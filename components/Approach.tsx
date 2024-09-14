@@ -4,6 +4,8 @@ import AOS from 'aos';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CanvasRevealEffect } from '@/components/ui/CanvasRevealEffects';
 
+// todo: move all reusbale class to utils
+
 const Approach = () => {
   useEffect(() => {
     AOS.init({
@@ -19,9 +21,9 @@ const Approach = () => {
       data-aos-offset='150'
       data-aos-easing='ease-in-sine'
       data-aos-duration='400'>
-      <h2 className='mx-auto block w-full text-5xl 2xl:text-7xl font-prompt font-black bg-gradient-to-r text-center uppercase mb-8'>
-        <span className='pr-2 relative z-10 bg-gradient-to-r from-gradient-light to-gradient-dark text-transparent bg-clip-text lg:hidden uppercaseb'>WORK PROCESS</span>
-        <span className=' pr-2 relative z-10 hidden lg:block uppercase'> WORK PROCESS</span>
+      <h2 className='heading-h2 mb-12'>
+        <span className='heading-h2-span-mobile'>WORK PROCESS</span>
+        <span className=' heading-h2-span'> WORK PROCESS</span>
       </h2>
       <div className=' flex flex-col lg:flex-row items-center justify-center gap-4 '>
         <Card

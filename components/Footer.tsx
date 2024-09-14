@@ -10,6 +10,10 @@ import grid from '@/public/footer-grid.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// todo: move all reusable class to utils
+// todo: change all px to rem-em
+// todo: move data to lib/footer
+
 const Footer = () => {
   useEffect(() => {
     AOS.init({
@@ -39,9 +43,9 @@ const Footer = () => {
       </div>
 
       <div className='flex flex-col items-center mb-8'>
-        <h2 className='mx-auto block w-full text-5xl 2xl:text-7xl font-prompt font-black bg-gradient-to-r text-center uppercase sm:mb-8'>
-          <span className='pr-2 relative z-10 bg-gradient-to-r from-gradient-light to-gradient-dark text-transparent bg-clip-text lg:hidden uppercaseb'> CONTACT ME</span>
-          <span className=' pr-2 relative z-10 hidden lg:block uppercase'> CONTACT ME</span>
+        <h2 className='heading-h2'>
+          <span className='heading-h2-span-mobile'> CONTACT ME</span>
+          <span className=' heading-h2-span'> CONTACT ME</span>
         </h2>
         <p className='my-5 text-center max-xs:text-sm  text-base sm:text-xl  2xl:text-2xl lg:w-[70vw] font-poppins'>
           I&apos;m always eager to discuss new technologies, brainstorm innovative project ideas, or explore opportunities for collaboration in both development and graphic design.

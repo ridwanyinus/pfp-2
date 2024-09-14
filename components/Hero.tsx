@@ -1,13 +1,12 @@
 import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
 import TypedComponent from './ui/TypedComponent';
-import { FaDiscord, FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { GoMail } from 'react-icons/go';
 import ShowLottie from './ui/ShowLottie';
 import assets from '@/lib/assets/assets';
 import Link from 'next/link';
 import { socialIcons } from '@/lib/content/hero';
-// todo: make utils class for all reusable classes
+import { getId } from '@/utils/helper';
 
 const Hero = () => {
   return (
@@ -38,8 +37,8 @@ const Hero = () => {
           </div>
 
           <div className='flex items-center  md:gap-4 gap-6 mt-8'>
-            {socialIcons.map((items, i: number) => (
-              <div key={i}>
+            {socialIcons.map((items) => (
+              <div key={getId()}>
                 <Link href={items.url} className={`${items.class} bg-black-200`}>
                   <items.icon className={`items.iconClass`} size={items.size} />
                 </Link>

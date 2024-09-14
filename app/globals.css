@@ -92,6 +92,17 @@
     @apply text-left text-6xl  xs:text-7xl small:text-[5.625rem] sm:text-8xl medium:text-[5rem] lg:text-[6.25rem] xl:text-[7.5rem] largesceen:text-9xl font-inter font-black leading-none w-full z-10 relative;
   }
 
+  .heading-h2 {
+    @apply mx-auto block w-full text-5xl 2xl:text-7xl font-prompt font-black bg-gradient-to-r text-center uppercase;
+  }
+
+  .heading-h2-span-mobile {
+    @apply pr-2 relative z-10 bg-gradient-to-r from-gradient-light to-gradient-dark text-transparent bg-clip-text xl:hidden;
+  }
+
+  .heading-h2-span {
+    @apply pr-2 relative z-10 hidden xl:block;
+  }
   .github:hover {
     background-color: #181717 !important;
   }
@@ -107,6 +118,34 @@
 
   .linkedIn:hover {
     background-color: #0077b5 !important;
+  }
+
+  .about {
+    @apply font-normal font-outfit text-xs xs:text-[0.8rem] small:text-base md:text-[0.813rem] lg:text-base desktop:text-lg 2xl:text-xl  text-slate-400 mb-4 relative z-50;
+  }
+
+  .about-span {
+    @apply pr-5 w-[3.75rem]  md:w-[3.75rem] lg:w-[6.75rem] inline-flex;
+  }
+
+  .about-job {
+    @apply font-outfit text-4xl text-purple mb-4 font-medium;
+  }
+
+  .about-offer {
+    @apply font-poppins text-lg;
+  }
+
+  .wobblecard {
+    @apply min-h-[20.625rem] xl:min-w-[21.875rem] max-small:w-[95%] max-sm:w-[90%] max-lg:w-[70%];
+  }
+
+  .tech-stack {
+    @apply animate-shimmer transition-colors backdrop-blur-3xl bg-[length:200%_100%] bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] max-small:w-[90%] small:w-44 lg:w-[8.438rem] xl:w-40 laptop:w-48  largesceen:w-[13.75rem] fourk:w-[15rem]  h-full rounded-xl flex flex-col items-center max-small:py-6 py-8;
+  }
+
+  .tech-stack_section {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:pl-8 lg:pl-0 gap-y-10 max-small:gap-4 small:gap-10 lg:gap-0 lg:grid-cols-6  w-full desktop:pl-14 largesceen:pl-20 sm:pl-0 small:pl-4  pl-8;
   }
 }
 

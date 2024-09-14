@@ -1,12 +1,16 @@
 'use client';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { projects } from '@/data';
 import { PinContainer } from './ui/3d-pin';
 import { FaArrowRight, FaLocationArrow } from 'react-icons/fa';
 import Image from 'next/image';
 import assets from '@/lib/assets/assets';
+import { getId } from '@/utils/helper';
+
+// todo: move all reusable class to utils
+// todo: change all px to rem-em
+
 const RecentProjects = () => {
   useEffect(() => {
     AOS.init({
@@ -23,14 +27,14 @@ const RecentProjects = () => {
       data-aos-offset='150'
       data-aos-easing='ease-in-sine'
       data-aos-duration='400'>
-      <h2 className='mx-auto block w-full text-5xl 2xl:text-7xl font-prompt font-black bg-gradient-to-r text-center uppercase mb-8'>
-        <span className='pr-2 relative z-10 bg-gradient-to-r from-gradient-light to-gradient-dark text-transparent bg-clip-text lg:hidden uppercaseb'> A small selection of my recent projects</span>
-        <span className=' pr-2 relative z-10 hidden lg:block uppercase'> A small selection of my recent projects</span>
+      <h2 className='heading-h2'>
+        <span className='heading-h2-span-mobile'> A small selection of my recent projects</span>
+        <span className=' heading-h2-span'> A small selection of my recent projects</span>
       </h2>
 
       <div className='grid md:grid-cols-2 gap-y-16 sm:gap-16 md:gap-12 lg:gap-8  lg:gap-y-16'>
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
-          <div key={id} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex items-center justify-center '>
+        {projects.map(({ title, des, img, iconLists, link }) => (
+          <div key={getId()} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex items-center justify-center '>
             <PinContainer title={link} href={link} className=' py-6  md:py-8 '>
               <div className='relative flex items-center justify-centerw w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30vh]  xs:h-25vh] small:h-[40vh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
                 <div className='relative w-full h-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
@@ -52,7 +56,7 @@ const RecentProjects = () => {
                 <div className='flex items-center'>
                   {iconLists.map((icon, index) => (
                     <div
-                      key={icon}
+                      key={getId()}
                       className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
                       style={{ transform: `translateX(-${5 * index * 2}px)` }}>
                       <Image width={32} height={32} src={icon} alt='icon' />
