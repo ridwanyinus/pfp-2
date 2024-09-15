@@ -4,8 +4,7 @@ import AOS from 'aos';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CanvasRevealEffect } from '@/components/ui/CanvasRevealEffects';
 import { getId } from '@/utils/helper';
-import { aproach, iconClass } from '@/lib/content/aproach';
-// todo: move all reusbale class to utils
+import { aproach } from '@/lib/content/aproach';
 
 const Approach = () => {
   useEffect(() => {
@@ -16,7 +15,7 @@ const Approach = () => {
   }, []);
   return (
     <section
-      className='w-full py-10 lg:py-20 px-5 xl:px-14 desktop:px-24 largesceen:px-48'
+      className='w-full py-10 lg:py-20 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh'
       data-aos='fade-up'
       data-aos-delay='0'
       data-aos-offset='150'
@@ -48,7 +47,6 @@ const Card = ({ title, icon, children, description }: { title: string; icon: Rea
       <Icon className='absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black' />
       <Icon className='absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black' />
       <Icon className='absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black' />
-     
 
       <AnimatePresence>
         {hovered && (

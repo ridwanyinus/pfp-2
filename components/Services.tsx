@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <main
       id='service'
-      className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5 xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 w-full h-full lg:pb-20 pb-8'
+      className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5 xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 size-full lg:pb-20 pb-8 min-h-svh'
       data-aos='fade-up'
       data-aos-delay='0'
       data-aos-offset='150'

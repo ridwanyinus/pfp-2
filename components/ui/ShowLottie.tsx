@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 };
 
-const ShowLottie = ({ path, className = '' }: Props) => {
+const ShowLottie = ({ className = '' }: Props) => {
   return (
     <div className={`max-w-sm md:max-w-md ${className}`}>
       <Player autoplay loop src={lottie}></Player>

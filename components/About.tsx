@@ -36,7 +36,7 @@ const About = () => {
   return (
     <main
       id='about'
-      className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5  xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 w-full h-full pb-20'
+      className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5  xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 size-full pb-20 min-h-svh'
       data-aos='fade-up'
       data-aos-delay='0'
       data-aos-offset='150'

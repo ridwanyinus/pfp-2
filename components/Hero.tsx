@@ -10,7 +10,7 @@ import { getId } from '@/utils/helper';
 
 const Hero = () => {
   return (
-    <section className='pb-20 pt-10 h-full'>
+    <section className='pb-20 pt-10 h-full min-h-svh'>
       <div>
         <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-svh' fill='white' />
         <Spotlight className='-top-10 left-full h-[80vh] w-[50vw]' fill='purple' />
@@ -47,7 +47,7 @@ const Hero = () => {
 
             <Link
               href='https://mail.google.com/mail/u/0/?to=ridwanyinusa15@gmail.com&fs=1&tf=cm'
-              className='w-10 h-10 desktop:h-14 desktop:w-14 largesceen:h-16 largesceen:w-16  flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 border-black-300 rounded-lg  hover:bg-white  group'>
+              className='w-10 h-10 desktop:h-14 desktop:w-14 largesceen:h-16 largesceen:w-16  flex-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 border-black-300 rounded-lg  hover:bg-white  group'>
               <Image
                 src={assets.gmail}
                 width={27}

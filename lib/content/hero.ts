@@ -1,6 +1,6 @@
 import { FaDiscord, FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
-
-export const socialIcons = [
+import { SocialIconsType } from '../types/sections';
+export const socialIcons: SocialIconsType[] = [
   {
     class:
       'w-10 h-10 desktop:h-14 desktop:w-14 largesceen:h-16 largesceen:w-16 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75  border-black-300 rounded-lg  github',

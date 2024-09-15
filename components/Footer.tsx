@@ -1,15 +1,12 @@
 'use client';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import { FaLinkedin, FaTelegram } from 'react-icons/fa';
-import { GoMail } from 'react-icons/go';
-import { IoLocationSharp } from 'react-icons/io5';
-import { FaDiscord } from 'react-icons/fa';
 import ContactForm from '@/components/ui/ContactForm';
 import grid from '@/public/footer-grid.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { getId } from '@/utils/helper';
+import { contacts } from '@/lib/content/footer';
 // todo: move all reusable class to utils
 // todo: change all px to rem-em
 // todo: move data to lib/footer
@@ -24,7 +21,7 @@ const Footer = () => {
   return (
     <footer
       id='footer'
-      className='w-full mt-8 px-5 xl:px-14 desktop:px-24 largesceen:px-48 pb-4'
+      className='w-full mt-8 px-5 xl:px-14 desktop:px-24 largesceen:px-48 pb-4 min-h-svh'
       data-aos='fade-up'
       data-aos-delay='0'
       data-aos-offset='150'
@@ -34,7 +31,7 @@ const Footer = () => {
         <Image
           src={grid}
           alt='grid'
-          className='w-full h-full opacity-50'
+          className='size-full opacity-50'
           style={{
             width: '100%',
             height: 'auto',
@@ -58,38 +55,13 @@ const Footer = () => {
             <p className='font-outfit font-medium sm:text-sm md:text-base desktop:text-xl max-sm:block'>Do you want to start a project together?</p>
             <p className='font-outfit font-medium sm:text-sm md:text-base mt-2 desktop:text-xl '>Let&apos;s Discuss</p>
           </div>
-          <a
-            href='https://discord.com/users/1142082910351011991'
-            className='flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base   gap-2 2xl:gap-4 desktop:text-lg w-fit mb-5'>
-            <FaDiscord size={20} color='#67e8f9' className='max-sm:w-[15px] desktop:w-[35px] desktop:h-[35px]' />
-            pioche_dgreat
-          </a>
 
-          <a
-            href='https://t.me/Labile_6'
-            className='flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base   gap-2 2xl:gap-4 desktop:text-lg w-fit '>
-            <FaTelegram size={20} color='#67e8f9' className='max-sm:w-[15px] desktop:w-[35px] desktop:h-[35px]' />
-            Labile_6
-          </a>
-
-          <a
-            href='https://www.linkedin.com/in/ridwan-opeyemi-yinusa/'
-            className='flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base   gap-2 2xl:gap-4 desktop:text-lg w-fit mt-5'>
-            <FaLinkedin size={20} color='#67e8f9' className='max-sm:w-[15px] desktop:w-[35px] desktop:h-[35px]' />
-            ridwanyinus
-          </a>
-
-          <a
-            href='https://mail.google.com/mail/u/0/?to=ridwanyinusa15@gmail.com&fs=1&tf=cm'
-            className='flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base   gap-2 2xl:gap-4 desktop:text-lg w-fit mt-5'>
-            <GoMail size={20} color='#67e8f9' className='max-sm:w-[15px] desktop:w-[35px] desktop:h-[35px]' />
-            ridwanyinus15@gmail.com
-          </a>
-
-          <p className='flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-white rounded-lg text-xs sm:text-sm md:text-base   gap-2 2xl:gap-4 desktop:text-lg w-fit mt-5'>
-            <IoLocationSharp size={20} color='#67e8f9' className='max-sm:w-[15px] desktop:w-[35px] desktop:h-[35px]' />
-            Lagos, Nigeria
-          </p>
+          {contacts.map((items) => (
+            <Link key={getId()} href={items.url} className={items.class}>
+              <items.icon className={items.iconClass} size={20} color='#67e8f9' />
+              {items.name}
+            </Link>
+          ))}
         </div>
 
         <div className='max-sm:flex-col flex  items-center w-full z-10 relative'>

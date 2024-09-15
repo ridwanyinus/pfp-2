@@ -18,7 +18,7 @@ const RecentProjects = () => {
   }, []);
   return (
     <div
-      className='py-16 largesceen:pt-28 px-5 xl:px-14 desktop:px-24 largesceen:px-48'
+      className='py-16 largesceen:pt-28 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh'
       id='projects'
       data-aos='fade-up'
       data-aos-delay='0'
@@ -35,7 +35,7 @@ const RecentProjects = () => {
           <div key={getId()} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex items-center justify-center '>
             <PinContainer title={link} href={link} className=' py-6  md:py-8 '>
               <div className='relative flex items-center justify-centerw w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30svh]  xs:h-[25svh] small:h-[40svh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
-                <div className='relative w-full h-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
+                <div className='relative size-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
                   <Image src={assets.bg} alt='bgimg' className='overflow-clip' />
                 </div>
                 <Image
@@ -55,14 +55,14 @@ const RecentProjects = () => {
                   {iconLists.map((icon, index) => (
                     <div
                       key={getId()}
-                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
+                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex-center'
                       style={{ transform: `translateX(-${5 * index * 2}px)` }}>
                       <Image width={32} height={32} src={icon} alt='icon' />
                     </div>
                   ))}
                 </div>
 
-                <div className='flex justify-center items-center'>
+                <div className='flex-center'>
                   <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Live Review</p>
                   <FaLocationArrow className='ms-3' color='#cbacf9' />
                 </div>

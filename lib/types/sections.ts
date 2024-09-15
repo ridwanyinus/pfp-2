@@ -1,9 +1,11 @@
+import { IconType } from 'react-icons';
+
 export interface SocialIconsType {
   url: string;
   class: string;
   size: number;
   iconClass: string;
-  icon?: JSX.Element;
+  icon: IconType;
   className?: any;
 }
 
@@ -15,4 +17,12 @@ export interface ApproachType {
   bg: string;
   colors?: number[][];
   dotSize: number;
+}
+
+export interface ContactType {
+  name: string;
+  icon: IconType;
+  url: string;
+  iconClass: string;
+  class: string;
 }
