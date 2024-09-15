@@ -20,9 +20,9 @@ import Loader from '@/components/Loader';
 // TODO: use localfonts for optimization
 // TODO: add animations.ts
 // TODO: create more utils-css for repeatable styles
-// TODO:  add a favicon for all the pages and sizes
 // todo: remove all text-px to rem
 // todo: replace all anchor tag with next/link
+// todo: change aos data
 export default function Home() {
   return (
     <main className='main'>

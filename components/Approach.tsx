@@ -3,7 +3,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CanvasRevealEffect } from '@/components/ui/CanvasRevealEffects';
-
+import { getId } from '@/utils/helper';
+import { aproach, iconClass } from '@/lib/content/aproach';
 // todo: move all reusbale class to utils
 
 const Approach = () => {
@@ -26,32 +27,11 @@ const Approach = () => {
         <span className=' heading-h2-span'> WORK PROCESS</span>
       </h2>
       <div className=' flex flex-col lg:flex-row items-center justify-center gap-4 '>
-        <Card
-          title='Planning & Strategy'
-          icon={<AceternityIcon order='Phase 1' />}
-          description="We'll collaborate to map out your website's goals, target audience, key functionalities, site structure, navigation, content requirements, and graphic design plan and strategy.">
-          <CanvasRevealEffect animationSpeed={5.1} containerClassName='bg-emerald-900' />
-        </Card>
-        <Card
-          title='Development & Progress Update'
-          icon={<AceternityIcon order='Phase 2' />}
-          description='Once we agree on the plan, I cue my lofi playlist and dive into coding and graphic design, keeping you updated every step from initial sketches to polished code and visuals.'>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName='bg-black'
-            colors={[
-              [236, 72, 153],
-              [232, 121, 249],
-            ]}
-            dotSize={2}
-          />
-        </Card>
-        <Card
-          title='Development & Launch'
-          icon={<AceternityIcon order='Phase 3' />}
-          description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, integrate graphics, and build your website from the ground up">
-          <CanvasRevealEffect animationSpeed={3} containerClassName='bg-sky-600' colors={[[125, 211, 252]]} />
-        </Card>
+        {aproach.map((item) => (
+          <Card key={getId()} title={item.title} icon={<AceternityIcon order={item.order} />} description={item.desc}>
+            <CanvasRevealEffect animationSpeed={item.animSpeed} containerClassName={item.bg} colors={item.colors} dotSize={item.dotSize} />
+          </Card>
+        ))}
       </div>
     </section>
   );
@@ -68,6 +48,7 @@ const Card = ({ title, icon, children, description }: { title: string; icon: Rea
       <Icon className='absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black' />
       <Icon className='absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black' />
       <Icon className='absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black' />
+     
 
       <AnimatePresence>
         {hovered && (
@@ -78,15 +59,9 @@ const Card = ({ title, icon, children, description }: { title: string; icon: Rea
       </AnimatePresence>
 
       <div className='relative z-20'>
-        <div className='text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center'>
-          {icon}
-        </div>
-        <h2 className='dark:text-white text-3xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center'>
-          {title}
-        </h2>
-        <h2
-          className='dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center font-poppins'
-          style={{ color: '#e4ecff' }}>
+        <div className='aproach-icon'>{icon}</div>
+        <h2 className='aproach-title'>{title}</h2>
+        <h2 className='aproach-desc' style={{ color: '#e4ecff' }}>
           {description}
         </h2>
       </div>
@@ -99,7 +74,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
     <div>
       <button className='relative rounded inline-flex h-12 overflow-hidden bg-black-300 p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'>
         <span className='absolute inset-[-1000%] animate-[spin_2s_linear_infinite]' />
-        <span className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2  font-bold text-white backdrop-blur-3xl text-xl'>{order}</span>
+        <span className='inline-flex size-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2  font-bold text-white backdrop-blur-3xl text-xl'>{order}</span>
       </button>
     </div>
   );

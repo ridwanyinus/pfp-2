@@ -7,9 +7,7 @@ import { FaArrowRight, FaLocationArrow } from 'react-icons/fa';
 import Image from 'next/image';
 import assets from '@/lib/assets/assets';
 import { getId } from '@/utils/helper';
-
-// todo: move all reusable class to utils
-// todo: change all px to rem-em
+import Link from 'next/link';
 
 const RecentProjects = () => {
   useEffect(() => {
@@ -36,7 +34,7 @@ const RecentProjects = () => {
         {projects.map(({ title, des, img, iconLists, link }) => (
           <div key={getId()} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex items-center justify-center '>
             <PinContainer title={link} href={link} className=' py-6  md:py-8 '>
-              <div className='relative flex items-center justify-centerw w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30vh]  xs:h-25vh] small:h-[40vh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
+              <div className='relative flex items-center justify-centerw w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30svh]  xs:h-[25svh] small:h-[40svh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
                 <div className='relative w-full h-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
                   <Image src={assets.bg} alt='bgimg' className='overflow-clip' />
                 </div>
@@ -50,7 +48,7 @@ const RecentProjects = () => {
               </div>
               <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1 font-poppins'>{title}</h1>
 
-              <p className='lg:text-xl lg:font-normal font-light line-clamp-2 tfont-poppins'>{des}</p>
+              <p className='lg:text-xl lg:font-normal font-light line-clamp-2 font-poppins'>{des}</p>
 
               <div className='flex items-center justify-between mt-7 mb-3'>
                 <div className='flex items-center'>
@@ -74,11 +72,11 @@ const RecentProjects = () => {
         ))}
       </div>
 
-      <a
+      <Link
         href='#footer'
         className='border-b border-white-100 xs:text-xl small:text-2xl fonr-poppins flex gap-2 text-center justify-center items-center w-fit mx-auto mt-12 font-semibold hover:text-purple text-white-200 transition-colors'>
         ASK FOR MORE PROJECTS <FaArrowRight />
-      </a>
+      </Link>
     </div>
   );
 };
