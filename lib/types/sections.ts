@@ -4,7 +4,7 @@ export interface SocialIconsType {
   class: string;
   size: number;
   iconClass: string;
-  icon?: JSX.Element;
+  icon: IconType;
   className?: any;
 }
 
