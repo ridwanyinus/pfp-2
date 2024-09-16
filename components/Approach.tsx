@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { CanvasRevealEffect } from '@/components/ui/CanvasRevealEffects';
 import { getId } from '@/utils/helper';
 import { aproach } from '@/lib/content/aproach';
-// todo: move all reusbale class to utils
 
 const Approach = () => {
   useEffect(() => {
