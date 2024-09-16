@@ -4,7 +4,6 @@ import { ThemeProvider } from './provider';
 import Head from 'next/head';
 import schemaData from '@/components/schema';
 import { seoData } from '@/lib/content/portfolio';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 export const metadata: Metadata = {
   title: seoData.title,
