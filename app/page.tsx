@@ -23,7 +23,7 @@ import Loader from '@/components/Loader';
 // todo: remove all text-px to rem
 // todo: replace all anchor tag with next/link
 // todo: change aos data
-// todo: change h-full-w-full to size-full
+// todo: add flex-center utils class
 export default function Home() {
   return (
     <main className='main'>
