@@ -32,10 +32,3 @@ export const aproach: ApproachType[] = [
     dotSize: 2,
   },
 ];
-
-export const iconClass = [
-  { class: 'absolute size-6 -top-3 -left-3 dark:text-white text-black' },
-  { class: 'absolute size-6 -bottom-3 -left-3 dark:text-white text-black' },
-  { class: 'absolute size-6 -top-3 -right-3 dark:text-white text-black' },
-  { class: 'absolute size-6 -bottom-3 -right-3 dark:text-white text-black' },
-];
