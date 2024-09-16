@@ -15,7 +15,7 @@ export const contacts: ContactType[] = [
     name: 'Labile_6',
     icon: FaTelegram,
     url: 'https://t.me/Labile_6',
-    class: 'flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base gap-2 2xl:gap-4 desktop:text-lg w-fit ',
+    class: 'flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base gap-2 2xl:gap-4 desktop:text-lg w-fit mt-5',
     iconClass: 'max-sm:w-[0.938rem] desktop:size-[2.188rem]',
   },
 

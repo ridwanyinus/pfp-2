@@ -1,5 +1,4 @@
 import { IconType } from 'react-icons';
-
 export interface SocialIconsType {
   url: string;
   class: string;
@@ -7,6 +6,7 @@ export interface SocialIconsType {
   iconClass: string;
   icon: IconType;
   className?: any;
+  hover: string;
 }
 
 export interface ApproachType {

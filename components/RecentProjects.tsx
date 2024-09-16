@@ -32,9 +32,9 @@ const RecentProjects = () => {
 
       <div className='grid md:grid-cols-2 gap-y-16 sm:gap-16 md:gap-12 lg:gap-8  lg:gap-y-16'>
         {projects.map(({ title, des, img, iconLists, link }) => (
-          <div key={getId()} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex items-center justify-center '>
+          <div key={getId()} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex-center'>
             <PinContainer title={link} href={link} className=' py-6  md:py-8 '>
-              <div className='relative flex items-center justify-centerw w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30svh]  xs:h-[25svh] small:h-[40svh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
+              <div className='relative flex-center w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30svh]  xs:h-[25svh] small:h-[40svh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
                 <div className='relative size-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
                   <Image src={assets.bg} alt='bgimg' className='overflow-clip' />
                 </div>
@@ -53,10 +53,7 @@ const RecentProjects = () => {
               <div className='flex items-center justify-between mt-7 mb-3'>
                 <div className='flex items-center'>
                   {iconLists.map((icon, index) => (
-                    <div
-                      key={getId()}
-                      className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex-center'
-                      style={{ transform: `translateX(-${5 * index * 2}px)` }}>
+                    <div key={getId()} className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex-center' style={{ transform: `translateX(-${5 * index * 2}px)` }}>
                       <Image width={32} height={32} src={icon} alt='icon' />
                     </div>
                   ))}
@@ -74,7 +71,7 @@ const RecentProjects = () => {
 
       <Link
         href='#footer'
-        className='border-b border-white-100 xs:text-xl small:text-2xl fonr-poppins flex gap-2 text-center justify-center items-center w-fit mx-auto mt-12 font-semibold hover:text-purple text-white-200 transition-colors'>
+        className='border-b border-white-100 xs:text-xl small:text-2xl fonr-poppins  gap-2 text-center flex-center w-fit mx-auto mt-12 font-semibold hover:text-purple text-white-200 transition-colors'>
         ASK FOR MORE PROJECTS <FaArrowRight />
       </Link>
     </div>

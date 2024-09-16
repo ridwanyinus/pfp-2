@@ -1,3 +1,4 @@
+'use client';
 import { Spotlight } from './ui/Spotlight';
 import Image from 'next/image';
 import TypedComponent from './ui/TypedComponent';
@@ -7,8 +8,10 @@ import assets from '@/lib/assets/assets';
 import Link from 'next/link';
 import { socialIcons } from '@/lib/content/hero';
 import { getId } from '@/utils/helper';
+import { useState } from 'react';
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState<number | null>(null);
   return (
     <section className='pb-20 pt-10 h-full min-h-svh'>
       <div>
@@ -17,8 +20,8 @@ const Hero = () => {
         <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue' />
       </div>
 
-      <div className='h-svh w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] absolute top-0 left-0 flex items-center justify-center'>
-        <div className='absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]'></div>
+      <div className='h-svh w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] absolute top-0 left-0 flex-center'>
+        <div className='absolute pointer-events-none inset-0 flex-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]'></div>
       </div>
 
       <section className='relative flex flex-col medium:flex-row  justify-center medium:items-center mt-10 lg:mt-14 largesceen:mt-20 px-5 xl:pl-14 desktop:px-24 largesceen:px-48 largesceen:gap-10 '>
@@ -37,9 +40,16 @@ const Hero = () => {
           </div>
 
           <div className='flex items-center  md:gap-4 gap-6 mt-8'>
-            {socialIcons.map((items) => (
+            {socialIcons.map((items, index) => (
               <div key={getId()}>
-                <Link href={items.url} className={`${items.class} bg-black-200`}>
+                <Link
+                  style={{
+                    color: isHovered === index ? items.hover : '',
+                  }}
+                  href={items.url}
+                  className={`${items.class} bg-black-200`}
+                  onMouseEnter={() => setIsHovered(index)}
+                  onMouseLeave={() => setIsHovered(null)}>
                   <items.icon className={`items.iconClass`} size={items.size} />
                 </Link>
               </div>
@@ -47,7 +57,7 @@ const Hero = () => {
 
             <Link
               href='https://mail.google.com/mail/u/0/?to=ridwanyinusa15@gmail.com&fs=1&tf=cm'
-              className='w-10 h-10 desktop:h-14 desktop:w-14 largesceen:h-16 largesceen:w-16  flex-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 border-black-300 rounded-lg  hover:bg-white  group'>
+              className='w-10 h-10 desktop:h-14 desktop:w-14 largesceen:h-16 largesceen:w-16  flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 border-black-300 rounded-lg  hover:bg-white  group'>
               <Image
                 src={assets.gmail}
                 width={27}

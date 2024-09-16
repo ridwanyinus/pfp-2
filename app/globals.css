@@ -103,17 +103,9 @@
   .heading-h2-span {
     @apply pr-2 relative z-10 hidden xl:block;
   }
+
   .github:hover {
     background-color: #181717 !important;
-  }
-
-  /* todo: find out the reason of not working */
-  .telegrams:hover {
-    background-color: #19adce !important;
-  }
-
-  .discord:hover {
-    background-color: #5865f2 !important;
   }
 
   .linkedIn:hover {
@@ -158,6 +150,10 @@
 
   .aproach-desc {
     @apply dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center font-poppins;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
   }
 }
 
