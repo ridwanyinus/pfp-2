@@ -10,6 +10,7 @@ import AOS from 'aos';
 import assets from '@/lib/assets/assets';
 import { about, programmer, designer } from '@/lib/content/about';
 import { getId } from '@/utils/helper';
+import { aosConfig } from '@/styles/animations/anim';
 const About = () => {
   const [copied, setCopied] = useState(false);
 
@@ -28,20 +29,10 @@ const About = () => {
     setCopied(true);
   };
   useEffect(() => {
-    AOS.init({
-      duration: 400,
-      easing: 'ease',
-    });
+    AOS.init();
   }, []);
   return (
-    <main
-      id='about'
-      className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5  xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 size-full pb-20 min-h-svh'
-      data-aos='fade-up'
-      data-aos-delay='0'
-      data-aos-offset='150'
-      data-aos-easing='ease-in-sine'
-      data-aos-duration='400'>
+    <main id='about' className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5  xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 size-full pb-20 min-h-svh' {...aosConfig}>
       <h2 className='heading-h2'>
         <span className='heading-h2-span-mobile'> ABOUT ME</span>
         <span className='heading-h2-span'> ABOUT ME</span>

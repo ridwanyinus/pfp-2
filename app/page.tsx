@@ -11,9 +11,6 @@ import Services from '@/components/Services';
 import TechStack from '@/components/TechStack';
 import Loader from '@/components/Loader';
 
-// TODO: make the code cleaner and more readable
-// TODO: add animations.ts
-// todo: change aos data
 export default function Home() {
   return (
     <main className='main'>
