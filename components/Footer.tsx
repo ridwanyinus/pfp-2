@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer
       id='footer'
-      className='w-full mt-8 px-5 xl:px-14 desktop:px-24 largesceen:px-48 pb-4'
+      className='w-full mt-8 px-5 xl:px-14 desktop:px-24 largesceen:px-48 pb-4 min-h-svh'
       data-aos='fade-up'
       data-aos-delay='0'
       data-aos-offset='150'
@@ -34,7 +34,7 @@ const Footer = () => {
         <Image
           src={grid}
           alt='grid'
-          className='w-full h-full opacity-50'
+          className='size-full opacity-50'
           style={{
             width: '100%',
             height: 'auto',

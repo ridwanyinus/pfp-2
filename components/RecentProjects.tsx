@@ -18,7 +18,7 @@ const RecentProjects = () => {
   }, []);
   return (
     <div
-      className='py-16 largesceen:pt-28 px-5 xl:px-14 desktop:px-24 largesceen:px-48'
+      className='py-16 largesceen:pt-28 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh'
       id='projects'
       data-aos='fade-up'
       data-aos-delay='0'
@@ -35,7 +35,7 @@ const RecentProjects = () => {
           <div key={getId()} className='h-[28rem] lg:min-h-[32.5rem] largesceen:h-[40rem] flex items-center justify-center '>
             <PinContainer title={link} href={link} className=' py-6  md:py-8 '>
               <div className='relative flex items-center justify-centerw w-[80vw] sm:w-[60vw] md:w-[300px] lg:w-[395px]  lg:overscroll-none  h-[30svh]  xs:h-[25svh] small:h-[40svh] lg:h-[30vh] desktop:h-[24vh] largesceen:h-[20vh] mb-10'>
-                <div className='relative w-full h-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
+                <div className='relative size-full overflow-x-clip lg:overflow-none xs:rounded-3xl' style={{ backgroundColor: '#13162D' }}>
                   <Image src={assets.bg} alt='bgimg' className='overflow-clip' />
                 </div>
                 <Image

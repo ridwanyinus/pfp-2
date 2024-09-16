@@ -10,7 +10,7 @@ import { getId } from '@/utils/helper';
 
 const Hero = () => {
   return (
-    <section className='pb-20 pt-10 h-full'>
+    <section className='pb-20 pt-10 h-full min-h-svh'>
       <div>
         <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-svh' fill='white' />
         <Spotlight className='-top-10 left-full h-[80vh] w-[50vw]' fill='purple' />

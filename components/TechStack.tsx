@@ -12,7 +12,7 @@ const TechStack = () => {
     });
   }, []);
   return (
-    <main className='py-20 h-full' data-aos='fade-up' data-aos-delay='0' data-aos-offset='150' data-aos-easing='ease-in-sine' data-aos-duration='400'>
+    <main className='py-20 h-full min-h-svh' data-aos='fade-up' data-aos-delay='0' data-aos-offset='150' data-aos-easing='ease-in-sine' data-aos-duration='400'>
       <h2 className='heading-h2 mb-12'>
         <span className='heading-h2-span-mobile '>MY TECH STACKS & TOOLS</span>
         <span className=' heading-h2-span'> MY TECH STACKS & TOOLS</span>
