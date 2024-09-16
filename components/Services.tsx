@@ -4,22 +4,13 @@ import AOS from 'aos';
 import { WobbleCard } from '@/components/ui/WobbleCard';
 import { getId } from '@/utils/helper';
 import { services } from '@/lib/content/services';
+import { aosConfig } from '@/styles/animations/anim';
 const Services = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 400,
-      easing: 'ease',
-    });
+    AOS.init();
   }, []);
   return (
-    <main
-      id='service'
-      className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5 xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 size-full lg:pb-20 pb-8 min-h-svh'
-      data-aos='fade-up'
-      data-aos-delay='0'
-      data-aos-offset='150'
-      data-aos-easing='ease-in-sine'
-      data-aos-duration='400'>
+    <main id='service' className='pt-5 lg:pt-10 xl:pt-24 desktop:pt-36 largesceen:pt-48  px-5 xl:px-14 desktop:px-24 largesceen:px-48 relative z-10 size-full lg:pb-20 pb-8 min-h-svh' {...aosConfig}>
       <h2 className='heading-h2'>
         <span className='heading-h2-span-mobile'> WHAT I DO</span>
         <span className=' heading-h2-span'> WHAT I DO</span>

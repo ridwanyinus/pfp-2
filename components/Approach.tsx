@@ -5,22 +5,13 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { CanvasRevealEffect } from '@/components/ui/CanvasRevealEffects';
 import { getId } from '@/utils/helper';
 import { aproach } from '@/lib/content/aproach';
-
+import { aosConfig } from '@/styles/animations/anim';
 const Approach = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 400,
-      easing: 'ease',
-    });
+    AOS.init();
   }, []);
   return (
-    <section
-      className='w-full py-10 lg:py-20 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh'
-      data-aos='fade-up'
-      data-aos-delay='0'
-      data-aos-offset='150'
-      data-aos-easing='ease-in-sine'
-      data-aos-duration='400'>
+    <section className='w-full py-10 lg:py-20 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh' {...aosConfig}>
       <h2 className='heading-h2 mb-12'>
         <span className='heading-h2-span-mobile'>WORK PROCESS</span>
         <span className=' heading-h2-span'> WORK PROCESS</span>

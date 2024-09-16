@@ -1,30 +1,20 @@
 'use client';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import { projects } from '@/data';
+import { projects } from '@/lib/content/projects';
 import { PinContainer } from './ui/3d-pin';
 import { FaArrowRight, FaLocationArrow } from 'react-icons/fa';
 import Image from 'next/image';
 import assets from '@/lib/assets/assets';
 import { getId } from '@/utils/helper';
 import Link from 'next/link';
-
+import { aosConfig } from '@/styles/animations/anim';
 const RecentProjects = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 400,
-      easing: 'ease',
-    });
+    AOS.init();
   }, []);
   return (
-    <div
-      className='py-16 largesceen:pt-28 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh'
-      id='projects'
-      data-aos='fade-up'
-      data-aos-delay='0'
-      data-aos-offset='150'
-      data-aos-easing='ease-in-sine'
-      data-aos-duration='400'>
+    <div className='py-16 largesceen:pt-28 px-5 xl:px-14 desktop:px-24 largesceen:px-48 min-h-svh' id='projects' {...aosConfig}>
       <h2 className='heading-h2'>
         <span className='heading-h2-span-mobile'> A small selection of my recent projects</span>
         <span className=' heading-h2-span'> A small selection of my recent projects</span>

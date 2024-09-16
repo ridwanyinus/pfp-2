@@ -7,26 +7,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getId } from '@/utils/helper';
 import { contacts } from '@/lib/content/footer';
-// todo: move all reusable class to utils
-// todo: change all px to rem-em
-// todo: move data to lib/footer
+import { aosConfig } from '@/styles/animations/anim';
 
 const Footer = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 400,
-      easing: 'ease',
-    });
+    AOS.init();
   }, []);
   return (
-    <footer
-      id='footer'
-      className='w-full mt-8 px-5 xl:px-14 desktop:px-24 largesceen:px-48 pb-4 min-h-svh'
-      data-aos='fade-up'
-      data-aos-delay='0'
-      data-aos-offset='150'
-      data-aos-easing='ease-in-sine'
-      data-aos-duration='400'>
+    <footer id='footer' className='w-full mt-8 px-5 xl:px-14 desktop:px-24 largesceen:px-48 pb-4 min-h-svh' {...aosConfig}>
       <div className='w-full absolute left-0 -bottom-72 min-h-96 pb-2'>
         <Image
           src={grid}
