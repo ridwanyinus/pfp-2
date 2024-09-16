@@ -8,6 +8,7 @@ export const socialIcons: SocialIconsType[] = [
     icon: FaGithub,
     size: 23,
     iconClass: 'desktop:w-[2.188rem] desktop:h-[2.188rem] largesceen:w-10 largesceen:h-10',
+    hover: 'github',
   },
   {
     class:
@@ -16,6 +17,7 @@ export const socialIcons: SocialIconsType[] = [
     icon: FaTelegram,
     size: 23,
     iconClass: 'desktop:w-[2.188rem] desktop:h-[2.188rem] largesceen:w-10 largesceen:h-10',
+    hover: '#0088CC',
   },
   {
     class:
@@ -24,6 +26,7 @@ export const socialIcons: SocialIconsType[] = [
     icon: FaDiscord,
     size: 23,
     iconClass: 'desktop:w-[2.188rem] desktop:h-[2.188rem] largesceen:w-10 largesceen:h-10 ',
+    hover: '#5865f2',
   },
 
   // todo: add linkedin back after updating linkedIn profile

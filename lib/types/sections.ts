@@ -6,6 +6,7 @@ export interface SocialIconsType {
   iconClass: string;
   icon: IconType;
   className?: any;
+  hover: string;
 }
 
 export interface ApproachType {
