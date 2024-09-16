@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import { projects } from '@/data';
+import { projects } from '@/lib/content/projects';
 import { PinContainer } from './ui/3d-pin';
 import { FaArrowRight, FaLocationArrow } from 'react-icons/fa';
 import Image from 'next/image';

@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import Image from 'next/image';
-import { techStack1, techStack2, techStack3 } from '@/data';
+import { techStack1, techStack2, techStack3 } from '@/lib/content/techstack';
 import { getId } from '@/utils/helper';
 const TechStack = () => {
   useEffect(() => {
