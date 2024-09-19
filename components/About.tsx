@@ -40,7 +40,7 @@ const About = () => {
       <section className='flex flex-col justify-between md:justify-center md:items-center pt-6 md:pt-12 xl:pt-28 max-lg:gap-y-10'>
         <div className='md:w-[70%]'>
           <h3 className='max-xs:text-sm font-light  text-base sm:text-lg md:text-[0.8rem] lg:text-lg xl:text-2xl largesceen:text-[1.75rem] fourk:text-4xl font-prompt mx-auto z-10 leading-[199%]'>
-            I’m Ridwan, a passionate Nigerian React front-end developer and graphic designer. I use React, Next.js, and Tailwind CSS to create user-friendly, responsive web applications. For graphics,
+            I’m Ridwan, a passionate  React front-end developer and graphic designer. I use React, Next.js, and Tailwind CSS to create user-friendly, responsive web applications. For graphics,
             I use Illustrator and Photoshop. <br /> Beyond coding, I enjoy playing chess, watching football, immersing myself in movies and series, listening to music, and diving into captivating
             books. These interests enhance my creativity and technical skills. <br /> As a developer and designer, I create beautiful, functional interfaces. I excel in group settings, coordinating
             closely with project managers, back-end developers, and designers to produce high-quality digital solutions. My attention to detail and problem-solving skills enable me to troubleshoot

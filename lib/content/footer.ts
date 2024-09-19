@@ -35,13 +35,4 @@ export const contacts: ContactType[] = [
     class: 'flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-cyan-300 rounded-lg text-xs sm:text-sm md:text-base gap-2 2xl:gap-4 desktop:text-lg w-fit mt-5 ',
     iconClass: 'max-sm:w-[0.938rem] desktop:size-[2.188rem]',
   },
-
-  {
-    name: 'Lagos, Nigeria',
-    icon: IoLocationSharp,
-    class:
-      'flex items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 text-white rounded-lg text-xs sm:text-sm md:text-base gap-2 2xl:gap-4 desktop:text-lg w-fit mt-5 pointer-events-none',
-    iconClass: 'max-sm:w-[0.938rem] desktop:size-[2.188rem]',
-    url: '#',
-  },
 ];
