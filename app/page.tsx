@@ -11,6 +11,8 @@ import Services from '@/components/Services';
 import TechStack from '@/components/TechStack';
 import Loader from '@/components/Loader';
 
+// todo: change all fonts to localfonts
+
 export default function Home() {
   return (
     <main className='main'>

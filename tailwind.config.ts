@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 
 const svgToDataUri = require('mini-svg-data-uri');
 
-const colors = require('tailwindcss/colors');
 const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette');
 
 const config = {
@@ -19,11 +18,10 @@ const config = {
     },
     extend: {
       fontFamily: {
-        outfit: ['Outfit', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        playfair: ['Playfair Display', 'serif'],
-        prompt: ['Prompt', 'sans-serif'],
+        outfit: ['var(--font-outfit)'],
+        poppins: ['var(--font-poppins)'],
+        inter: ['var(--font-inter)'],
+        prompt: ['var(--font-prompt)'],
       },
       screens: {
         xs: '360px',
