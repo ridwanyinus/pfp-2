@@ -8,9 +8,45 @@ import 'aos/dist/aos.css';
 import localFont from 'next/font/local';
 
 const outfit = localFont({
-  src: './fonts/outfit-VariableFont_wght.ttf',
+  src: [
+   
+    {
+      path: './fonts/Outfit-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-ExtraBold.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Outfit-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
   variable: '--font-outfit',
-  weight: '100 900',
 });
 
 const poppins = localFont({
