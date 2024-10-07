@@ -1,9 +1,11 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { runPreloaderAnimation } from '@/styles/animations/anim';
+import { useGSAP } from '@gsap/react';
+
 const Loader: React.FC = () => {
   const preloaderRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  useGSAP(() => {
     runPreloaderAnimation(preloaderRef);
   }, []);
 

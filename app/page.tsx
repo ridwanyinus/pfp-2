@@ -11,11 +11,12 @@ import Services from '@/components/Services';
 import TechStack from '@/components/TechStack';
 import Loader from '@/components/Loader';
 
+// todo: lighthouse optimization
 
 export default function Home() {
   return (
     <main className='main'>
-      <div className='w-full'>
+      <div className='w-full '>
         <Loader />
         <FloatingNav navItems={navItems} />
         <Ridwan />

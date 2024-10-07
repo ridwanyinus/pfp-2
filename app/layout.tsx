@@ -1,15 +1,13 @@
 import type { Metadata } from 'next';
 import '../styles/globals.css';
 import { ThemeProvider } from './provider';
-import Head from 'next/head';
-import schemaData from '@/components/schema';
 import { seoData } from '@/lib/content/portfolio';
 import 'aos/dist/aos.css';
 import localFont from 'next/font/local';
+import ClientSideScript from '@/components/ClientSideScript';
 
 const outfit = localFont({
   src: [
-   
     {
       path: './fonts/Outfit-Light.ttf',
       weight: '300',
@@ -260,14 +258,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='scroll-smooth'>
-      <Head>
-        <meta name='google-site-verification' content='IwEzWIUdKrFD6IMbBVaEowWRRvww402-YO9W9uLAZgc' />
-        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-      </Head>
       <body className={`${poppins.variable} ${inter.variable} ${prompt.variable} ${outfit.variable} font-poppins`}>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
+        <ClientSideScript />
       </body>
     </html>
   );
